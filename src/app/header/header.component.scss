@@ -7,10 +7,19 @@ header {
     align-items: center;
 }
 
-a {
-    position: relative;
-    text-decoration: none;
-    color: inherit;
+a:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    border-top: none;
+    border-right: none;
+    bottom: -2px;
+    left: -7px;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
 }
 
 a:after {
@@ -23,8 +32,9 @@ a:after {
     left: 0;
     background-color: black;
     border-radius: 12px;
-    transform-origin: bottom right;
+    transform-origin: bottom left;
     transition: transform 0.25s ease-out;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
 }
 
 a:hover:after {
@@ -40,7 +50,7 @@ a:hover:after {
 .menu {
     width: 25vw;
     min-width: 300px;
-    max-width: 400px;;
+    max-width: 400px;
     display: flex;
     justify-content: space-between;
 }
