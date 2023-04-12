@@ -1,7 +1,6 @@
 app-header {
     height: 7.5vh;
     min-height: 60px;
-    max-height: 80px;
     display: flex;
 }
 
@@ -10,4 +9,13 @@ app-home {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 19vh;
+}
+
+app-skilltree {
+    width: calc(100vw - 2 * 12vw - 6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7.5vh;
 }
