@@ -5,17 +5,15 @@ app-header {
 }
 
 app-home {
-    height: calc(100vh - 7.5vh * 2);
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 19vh;
 }
 
 app-skilltree {
-    width: calc(100vw - 2 * 12vw - 2 * 3px);
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin-bottom: 7.5vh;
+    margin-bottom: 15vh;
 }
