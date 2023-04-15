@@ -32,7 +32,7 @@ export class ScrollAnimationDirective {
     }
 
 
-    private returnDuration(animation: String) {
+    private returnDuration(animation: string) {
         switch (animation) {
             case 'move-upwards':
                 return '10s';
