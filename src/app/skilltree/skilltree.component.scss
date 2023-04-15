@@ -19,8 +19,7 @@ td {
 }
 
 img {
-    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    animation-duration: 10s;
+    // animation: move-upwards 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 .border-gap {

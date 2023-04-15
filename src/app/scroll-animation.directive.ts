@@ -4,7 +4,7 @@ import { Directive, ElementRef, Input, HostListener } from '@angular/core';
     selector: '[appScrollAnimation]'
 })
 export class ScrollAnimationDirective {
-    @Input() animationClass: string = '';
+    @Input() animation: string = '';
 
     constructor(private element: ElementRef) { }
 
@@ -21,10 +21,33 @@ export class ScrollAnimationDirective {
 
     private updateAnimation(isVisible: boolean): void {
         const element = this.element.nativeElement;
+        let duration = this.returnDuration(this.animation);
+        const timingFunction = this.returnTimingFunction(this.animation);
         if (isVisible) {
-            element.style.animation = `${this.animationClass} infinite`; // animation duration is set in the css
+            console.log(`${this.animation} ${duration} ${timingFunction} infinite`);
+            element.style.animation = `${this.animation} ${duration} ${timingFunction} infinite`;
         } else {
             element.style.animation = 'none';
+        }
+    }
+
+
+    private returnDuration(animation: String) {
+        switch (animation) {
+            case 'move-upwards':
+                return '10s';
+            default:
+                return '3s';
+        }
+    }
+
+
+    private returnTimingFunction(animation: string) {
+        switch (animation) {
+            case 'move-upwards':
+                return 'cubic-bezier(0.4, 0, 0.2, 1)';
+            default:
+                return 'ease-in-out';
         }
     }
 }
