@@ -19,7 +19,7 @@ td {
 }
 
 img {
-    // animation: move-upwards 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    // animation: move-upwards 10s cubic-bezier(0.4, 0, 0.2, 1) 0 infinite;
 }
 
 .border-gap {
@@ -35,7 +35,7 @@ img {
     content: "";
     position: absolute;
     top: 0;
-    width: 17.5vw;
+    width: 15vw;
     height: 3px;
     background-color: #000;
 }

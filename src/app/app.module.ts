@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SkilltreeComponent } from './skilltree/skilltree.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ProjectComponent } from './project/project.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     HeaderComponent,
     HomeComponent,
     SkilltreeComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
@@ -25,4 +27,4 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { ScrollAnimationDirective: any }

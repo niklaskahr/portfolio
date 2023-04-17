@@ -1,0 +1,89 @@
+button {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 60px;
+    gap: 10px;
+    width: 164px;
+    height: 68px;
+    border: 4px solid black;
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
+}
+
+// While hovering
+// Change to: "Variant4";
+// Animate: Smart animate;
+// animation-timing-function: ease-in-out;
+// animation-duration: 100ms;
+
+/*
+.Variant4 {
+    padding: 20px 80px;
+    gap: 10px;
+    width: 207px;
+    height: 68px;
+    border: 4px solid #000000;
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
+}
+
+// While pressing
+// Change to: "Variant3";
+// Animate: Smart animate;
+// animation-timing-function: ease-out;
+// animation-duration: 150ms;
+
+
+.Variant3 {
+    padding: 20px 80px;
+    gap: 10px;
+    width: 204px;
+    height: 68px;
+    background: #000000;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+// After delay
+// animation-delay: 400ms;
+// Change to: "Default";
+// Animate: Smart animate;
+// animation-timing-function: ease-out;
+// animation-duration: 100ms;
+*/
+
+.project-illustration {
+    width: 50%;
+}
+
+.enumeration {
+    width: 100%;
+    text-align: end;
+    font-family: 'Syne';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 120%;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.project-details {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 0 3rem 5rem;
+}
+
+.technologies {
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 120%;
+    color: #FF9900;
+}
+
+.description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+}
