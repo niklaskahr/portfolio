@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ScrollAnimationDirective } from './scroll-animation.directive';
+import { ScrollTriggerDirective } from './scroll-trigger.directive';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SkilltreeComponent } from './skilltree/skilltree.component';
@@ -14,6 +15,7 @@ import { ProjectComponent } from './project/project.component';
   declarations: [
     AppComponent,
     ScrollAnimationDirective,
+    ScrollTriggerDirective,
     HeaderComponent,
     HomeComponent,
     SkilltreeComponent,

@@ -7,7 +7,7 @@ tr {
     text-align: center;
 
     img {
-        margin-bottom: 4px;
+        margin-bottom: 6px;
     }
 
 }
@@ -18,8 +18,13 @@ td {
     text-align: center;
 }
 
-img {
-    // animation: move-upwards 10s cubic-bezier(0.4, 0, 0.2, 1) 0 infinite;
+.move-upwards {
+    animation-name: move-upwards;
+    animation-duration: 12s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    // animation-delay set in component
 }
 
 .border-gap {
@@ -52,39 +57,51 @@ img {
     transform: translateY(40%);
 }
 
+.negative-m {
+    display: block;
+    margin-bottom: -11%;
+}
+
 @keyframes move-upwards {
 
-    0%,
-    10% {
+    0% {
         transform: translateY(0);
     }
 
-    20% {
+    10% {
         transform: translateY(-17.5px);
+    }
+
+    20% {
+        transform: translateY(-13.5px);
     }
 
     30% {
-        transform: translateY(-14px);
+        transform: translateY(-17.5px);
     }
 
     40% {
-        transform: translateY(-17.5px);
+        transform: translateY(-13.5px);
     }
 
     50% {
-        transform: translateY(-14px);
+        transform: translateY(-17.5px);
     }
 
     60% {
-        transform: translateY(-17.5px);
+        transform: translateY(-13.5px);
     }
 
     70% {
-        transform: translateY(-14px);
+        transform: translateY(-17.5px);
     }
 
     80% {
-        transform: translateY(-17.5px);
+        transform: translateY(-13.5px);
+    }
+
+    90% {
+        transform: translateY(-22.5px);
     }
 
     100% {
