@@ -5,12 +5,11 @@ import { Directive, ElementRef, Input, HostListener, OnInit } from '@angular/cor
 })
 export class ScrollAnimationDirective implements OnInit {
     @Input() animation: string = '';
-    delay: number = 0;
+    static delay: number = 0; // shared between all instances of this directive
 
     constructor(private element: ElementRef) { }
 
     ngOnInit(): void {
-        console.log('test');
         this.updateAnimation(true);
     }
 
@@ -30,8 +29,8 @@ export class ScrollAnimationDirective implements OnInit {
         let duration = this.returnDuration(this.animation);
         const timingFunction = this.returnTimingFunction(this.animation);
         if (isVisible) {
-            console.log(`${this.animation} ${duration}s ${timingFunction} ${this.delay}s infinite`);
-            element.style.animation = `${this.animation} ${duration}s ${timingFunction} ${this.delay}s infinite`;
+            console.log(`${this.animation} ${duration}s ${timingFunction} ${ScrollAnimationDirective.delay}s infinite`);
+            element.style.animation = `${this.animation} ${duration}s ${timingFunction} ${ScrollAnimationDirective.delay}s infinite`;
             this.increaseDelay();
         } else {
             element.style.animation = 'none';
@@ -59,9 +58,6 @@ export class ScrollAnimationDirective implements OnInit {
     }
 
     private increaseDelay() {
-        this.delay += 0.25;
-        if (this.delay > 2.25) { // 0.25 increments, 0-2.25s delay
-            this.delay = 0;
-        }
+        ScrollAnimationDirective.delay += 0.25;
     }
 }
