@@ -68,6 +68,14 @@ button {
     transform: translate(20px, 20px);
 }
 
+.arrow {
+    position: absolute;
+    top: calc(50% - 38px);
+    right: -40px;
+    transform: rotate(135deg);
+    z-index: 1;
+}
+
 .project-details {
     width: 45%;
     display: flex;

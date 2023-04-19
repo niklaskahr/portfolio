@@ -12,7 +12,6 @@ export class ScrollTriggerDirective {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    console.log(scrollPosition);
     if (scrollPosition >= this.scrollPoint) {
       this.scrollAnimation.updateAnimation(true);
     } else {

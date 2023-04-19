@@ -13,7 +13,6 @@ export class ScrollAnimationDirective {
     if (isVisible) {
       if (!element.classList.contains('move-upwards')) {
         element.style.animationDelay = `${ScrollAnimationDirective.delay}s`;
-        console.log(`${ScrollAnimationDirective.delay}s !important`);
         element.classList.add('move-upwards');
         this.increaseDelay();
       }
