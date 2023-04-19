@@ -10,10 +10,10 @@ app-project {
         mix-blend-mode: normal;
         opacity: 1;
         transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1);
-
-        &.arrow {
-            transform: unset;
-        }
+    }
+    &:hover>.project-illustration>.border>.arrow {
+        //animation-iteration-count: 1;
+        transform: rotate(0deg);
     }
 }
 
