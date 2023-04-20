@@ -3,13 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ScrollAnimationDirective } from './scroll-animation.directive';
-import { ScrollTriggerDirective } from './scroll-trigger.directive';
+import { ScrollAnimationDirective } from './directives/scroll-animation.directive';
+import { ScrollTriggerDirective } from './directives/scroll-trigger.directive';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { SkilltreeComponent } from './skilltree/skilltree.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ProjectComponent } from './project/project.component';
+import { ContactComponent } from './contact/contact.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,14 @@ import { ProjectComponent } from './project/project.component';
     HomeComponent,
     SkilltreeComponent,
     PortfolioComponent,
-    ProjectComponent
+    ProjectComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
