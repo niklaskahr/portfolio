@@ -3,30 +3,34 @@ table {
     height: 100%;
     border-spacing: 2em 6em;
 
-    tr {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: flex-start;
 
-        img {
-            margin-bottom: 6px;
-        }
-
-    }
 
     tr:first-child {
         margin-bottom: 3rem;
     }
 
-    td {
-        width: 85px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-weight: 700;
-        line-height: 120%;
-        text-align: center;
+
+}
+
+tr {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+    img {
+        margin-bottom: 6px;
     }
+
+}
+
+td {
+    width: 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    line-height: 120%;
+    text-align: center;
 }
 
 .move-upwards {
