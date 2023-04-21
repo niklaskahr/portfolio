@@ -1,15 +1,16 @@
 app-project {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 3rem;
     mix-blend-mode: luminosity;
     opacity: 0.8; // Adjust the opacity as needed to achieve the desired effect
-    transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0 12vw;
 
     &:hover {
         mix-blend-mode: normal;
         opacity: 1;
-        transition: opacity 225ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 }
 

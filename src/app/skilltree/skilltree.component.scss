@@ -33,8 +33,8 @@ td {
     text-align: center;
 }
 
-.move-upwards {
-    animation-name: move-upwards;
+.move-upward {
+    animation-name: move-upward;
     animation-duration: 12s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
@@ -71,7 +71,7 @@ td {
     transform: translateY(40%);
 }
 
-@keyframes move-upwards {
+@keyframes move-upward {
 
     0% {
         transform: translateY(0);

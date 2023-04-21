@@ -11,13 +11,13 @@ export class ScrollAnimationDirective {
   public updateAnimation(isVisible: boolean): void {
     const element = this.element.nativeElement;
     if (isVisible) {
-      if (!element.classList.contains('move-upwards')) {
+      if (!element.classList.contains('move-upward')) {
         element.style.animationDelay = `${ScrollAnimationDirective.delay}s`;
-        element.classList.add('move-upwards');
+        element.classList.add('move-upward');
         this.increaseDelay();
       }
     } else {
-      element.classList.remove('move-upwards');
+      element.classList.remove('move-upward');
       this.resetDelay();
     }
   }

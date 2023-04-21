@@ -11,10 +11,22 @@ body {
     margin: 0 12vw;
 }
 
-app-project { // cannot be added anywhere else
-    &:hover>.project-illustration>.border>.arrow {
-        //animation-iteration-count: 1;
-        transform: rotate(0deg);
+app-project {
+
+    // cannot be added anywhere else
+
+    &:hover>.project-illustration>.border {
+        visibility: visible;
+        animation: fade-in-top-left 0.2s ease;
+
+        .arrow {
+            animation: turn-right 0.65s ease-out forwards;
+        }
+    }
+
+    &:hover>.project-details>div {
+        visibility: visible;
+        animation: fade-in-left 0.2s ease;
     }
 }
 
@@ -92,12 +104,65 @@ a {
     border: 3px solid #FFFCF3;
 }
 
-@keyframes fade-out {
+@keyframes fade-in-left {
     0% {
-        opacity: 1;
+        opacity: 0;
+        transform: translateX(-25%);
+        animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
     }
 
     100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes fade-in-top-left {
+    0% {
         opacity: 0;
+        transform: translate(-20px, -20px);
+        animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(20px, 20px);
+    }
+}
+
+@keyframes turn-right {
+    0% {
+        transform: rotate(135deg);
+    }
+
+    45% {
+        transform: rotate(-45deg);
+    }
+
+    75% {
+        transform: rotate(25deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes turn-left {
+    0% {
+        transform: rotate(-135deg);
+    }
+
+    45% {
+        transform: rotate(45deg);
+    }
+
+    75% {
+        transform: rotate(-25deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
     }
 }

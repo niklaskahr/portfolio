@@ -19,6 +19,8 @@ app-skilltree {
 }
 
 app-portfolio {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 14.5vh;
 }
