@@ -1,3 +1,5 @@
 <h2 class="mb-1">Portfolio</h2>
-<span class="standard-font">The following is a sample of my work - please feel free to try out some of my projects.</span>
-<app-project></app-project>
+<span class="standard-font">The following is a sample of my work - please feel free to try out some of my
+    projects.</span>
+<app-project *ngFor="let project of projects; let i = index" [class.alternate]="i % 2 !== 0" [projectData]="project"
+    [index]="i"></app-project>

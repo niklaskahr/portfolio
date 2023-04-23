@@ -24,7 +24,7 @@ app-project {
         }
     }
 
-    &:hover>.project-details>div {
+    &:hover>.project-details>.animated-project-details {
         visibility: visible;
         animation: fade-in-left 0.2s ease;
     }
@@ -107,7 +107,7 @@ a {
 @keyframes fade-in-left {
     0% {
         opacity: 0;
-        transform: translateX(-25%);
+        transform: translateX(-15%);
         animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
     }
 
@@ -131,25 +131,25 @@ a {
     }
 }
 
-@keyframes turn-right {
+@keyframes turn-left {
     0% {
-        transform: rotate(135deg);
+        transform: rotate(45deg);
     }
 
     45% {
-        transform: rotate(-45deg);
+        transform: rotate(-135deg);
     }
 
     75% {
-        transform: rotate(25deg);
+        transform: rotate(-65deg);
     }
 
     100% {
-        transform: rotate(0deg);
+        transform: rotate(-90deg);
     }
 }
 
-@keyframes turn-left {
+@keyframes turn-right {
     0% {
         transform: rotate(-135deg);
     }
