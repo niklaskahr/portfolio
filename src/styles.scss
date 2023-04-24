@@ -1,3 +1,5 @@
+@import 'src/assets/_keyframe-animations.scss';
+
 html {
     scroll-behavior: smooth;
 }
@@ -19,14 +21,26 @@ app-project {
         visibility: visible;
         animation: fade-in-top-left 0.2s ease;
 
+        &.alternate-border {
+            animation: fade-in-top-right 0.2s ease !important;
+        }
+
         .arrow {
             animation: turn-right 0.65s ease-out forwards;
+
+            &.alternate-arrow {
+                animation: turn-left 0.65s ease-out forwards !important;
+            }
         }
     }
 
-    &:hover>.project-details>.animated-project-details {
+    &:hover>.project-details>.animated-details {
         visibility: visible;
         animation: fade-in-left 0.2s ease;
+
+        &.alternate-animated-details {
+            animation: fade-in-right 0.2s ease;
+        }
     }
 }
 
@@ -102,67 +116,4 @@ a {
     background-color: #FF9900;
     border-radius: 8px;
     border: 3px solid #FFFCF3;
-}
-
-@keyframes fade-in-left {
-    0% {
-        opacity: 0;
-        transform: translateX(-15%);
-        animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-
-@keyframes fade-in-top-left {
-    0% {
-        opacity: 0;
-        transform: translate(-20px, -20px);
-        animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(20px, 20px);
-    }
-}
-
-@keyframes turn-left {
-    0% {
-        transform: rotate(45deg);
-    }
-
-    45% {
-        transform: rotate(-135deg);
-    }
-
-    75% {
-        transform: rotate(-65deg);
-    }
-
-    100% {
-        transform: rotate(-90deg);
-    }
-}
-
-@keyframes turn-right {
-    0% {
-        transform: rotate(-135deg);
-    }
-
-    45% {
-        transform: rotate(45deg);
-    }
-
-    75% {
-        transform: rotate(-25deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
 }

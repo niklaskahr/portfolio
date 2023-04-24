@@ -1,16 +1,16 @@
-
-<div class="project-illustration">
-    <img class="illustration" [src]="projectData.image" [alt]="projectData.title">
-    <div class="border">
-        <img class="arrow" src="./assets/img/arrow.svg" alt="Arrow">
+<div (click)="navigateToLink(projectData.link)" class="project-illustration">
+    <img class="illustration shadow-sm" [src]="projectData.image" [alt]="projectData.title">
+    <div class="border" [ngClass]="{ 'alternate-border': isAlternate }">
+        <img class="arrow" [ngClass]="{ 'alternate-arrow': isAlternate }" src="./assets/img/arrow.svg" alt="Arrow">
     </div>
 </div>
-<div class="project-details">
-    <span class="enumeration">{{ projectData.enumeration }}</span>
-    <div class="animated-project-details">
+<div class="project-details" [ngClass]="{ 'alternate-details': isAlternate }">
+    <span class="enumeration">{{ getEnumeration() }}</span>
+    <div class="animated-details" [ngClass]="{ 'alternate-animated-details': isAlternate }">
         <h3 class="title">{{ projectData.title }}</h3>
         <span class="technologies">{{ projectData.technologies }}</span>
-        <p class="description">{{ projectData.description }}</p>
-        <button>Try it out</button>
+        <p class="description" [innerHTML]="projectData.description"></p>
+        <button>Explore</button>
     </div>
+    <!-- (click)="navigateToLink(projectData.link)" -->
 </div>
