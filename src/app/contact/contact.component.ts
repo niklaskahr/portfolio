@@ -42,7 +42,7 @@ export class ContactComponent {
     // delete success message after 5 seconds (fade out)
     setTimeout(() => {
       const success = document.querySelector('.success');
-      success?.classList.add('fade-out');
+      success?.classList.add('fade-out-success');
       setTimeout(() => {
         success?.remove();
       }, 1250);

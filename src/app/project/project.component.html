@@ -10,7 +10,6 @@
         <h3 class="title">{{ projectData.title }}</h3>
         <span class="technologies">{{ projectData.technologies }}</span>
         <p class="description" [innerHTML]="projectData.description"></p>
-        <button>View</button>
+        <button (click)="navigateToLink(projectData.link)">View</button>
     </div>
-    <!-- (click)="navigateToLink(projectData.link)" -->
 </div>
