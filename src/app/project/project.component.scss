@@ -7,17 +7,17 @@ button {
     background-color: transparent;
     transition: 100ms;
     cursor: pointer;
-    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
 
     &:hover {
-        padding: 16px 68px;
         font-weight: 700;
+        padding: 16px 68px;
+        filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.15));
     }
 
     &:active {
         font-weight: 400;
         color: #FFFCF3;
-        background: black;
+        background-color: black;
         padding: 16px 65px;
         box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
         transition: 150ms;

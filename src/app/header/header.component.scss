@@ -24,7 +24,7 @@ a:after {
     position: absolute;
     content: '';
     transform: scaleX(0);
-    width: 100%;
+    width: calc(100% + 6px);
     height: 2px;
     bottom: -3px;
     left: 0;
@@ -38,11 +38,6 @@ a:after {
 a:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
-}
-
-.logo {
-    cursor: pointer;
-    object-fit: contain;
 }
 
 .menu {
