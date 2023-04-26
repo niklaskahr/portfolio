@@ -13,6 +13,10 @@ import { ProjectComponent } from './project/project.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ImprintDialogComponent } from './imprint-dialog/imprint-dialog.component';
+
 
 @NgModule({
   declarations: [
@@ -25,13 +29,16 @@ import { FooterComponent } from './footer/footer.component';
     PortfolioComponent,
     ProjectComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    ImprintDialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

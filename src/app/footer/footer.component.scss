@@ -16,7 +16,12 @@ footer {
 }
 
 .footer-section:last-child {
-    align-items: flex-end; /* This will align the last .footer-section's children to the end (right) */
+    align-items: flex-end;
+    /* This will align the last .footer-section's children to the end (right) */
+}
+
+.clickable {
+    cursor: pointer;
 }
 
 .poppins {

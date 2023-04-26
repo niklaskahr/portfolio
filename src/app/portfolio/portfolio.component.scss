@@ -16,10 +16,14 @@ app-project {
         mix-blend-mode: normal;
         opacity: 1;
     }
+
+    &:last-child {
+        padding: 4rem 12vw 0 12vw;
+    }
 }
 
 span {
     display: block;
     text-align: center;
-    margin-bottom: 7.5vh;
+    margin-bottom: 5vh;
 }

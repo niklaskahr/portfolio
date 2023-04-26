@@ -14,7 +14,6 @@ export class ContactComponent {
 
 
   async sendMail() {
-    console.log('Sending Mail', this.form);
     const nameInput = this.nameInput.nativeElement;
     const emailInput = this.emailInput.nativeElement;
     const messageInput = this.messageInput.nativeElement;
