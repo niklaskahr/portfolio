@@ -1,10 +1,10 @@
 footer {
-    height: 10vh;
-    min-height: 90px;
+    height: 12.5vh;
+    min-height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
 }
 
 .footer-section {
@@ -17,11 +17,6 @@ footer {
 
 .footer-section:last-child {
     align-items: flex-end;
-    /* This will align the last .footer-section's children to the end (right) */
-}
-
-.clickable {
-    cursor: pointer;
 }
 
 .poppins {
@@ -34,4 +29,59 @@ footer {
 
 .font-16px {
     font-size: 16px;
+}
+
+.footer-section .mb-2 a img {
+    position: relative;
+    transition: 300ms ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.footer-section:first-child a {
+    display: contents;
+}
+
+.clickable {
+    font-family: 'Overpass', sans-serif; // preloading purposes
+    position: relative;
+    transition: 100ms;
+    cursor: pointer;
+    will-change: font-weight, transform;
+
+    &::after {
+        position: absolute;
+        content: '';
+        transform: scaleX(0);
+        width: 101%;
+        height: 2px;
+        bottom: -3px;
+        left: 0;
+        background-color: #FF9900;
+        border-radius: 5px;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    &:hover {
+        font-weight: 700;
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
+
+.clickable-ready {
+    opacity: 1;
+    transition: font-weight 100ms, transform 100ms;
+}
+
+.legal-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }

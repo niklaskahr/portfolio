@@ -1,18 +1,21 @@
 <div class="background">
-    <div class="polygon-frame"></div>
+    <div id="contact" class="polygon-frame"></div>
     <div class="contact-container">
         <div class="heading mb-4">
             <h2>Say Hello!</h2>
         </div>
+        <div class="width-100">
+            <span class="orange">Want to discuss a new project?</span>
+            <p class="standard-font">Let's converse about your ideas and make it happen.</p>
+        </div>
         <form #form ngNativeValidate (submit)="sendMail()">
-            <div>
-                <span class="orange">Want to discuss a new project?</span>
-                <p class="standard-font">Let's converse about your ideas and make it happen.</p>
-            </div>
             <input #nameInput required placeholder="Your name" type="text" name="name">
             <input #emailInput required placeholder="Your email" type="email" name="email">
             <textarea #messageInput required placeholder="Your message" type="text" name="message"></textarea>
-            <button #formButton class="standard-font">Send message</button>
+            <button #formButton class="button-black standard-font">Send message</button>
         </form>
+        <a class="arrow-link" href="#header">
+            <div class="arrow"></div>
+        </a>
     </div>
 </div>

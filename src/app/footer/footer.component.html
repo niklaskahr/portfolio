@@ -1,8 +1,11 @@
 <div class="background">
     <footer>
         <div class="footer-section">
-            <img class="logo inverted" src="./assets/img/logo.svg" alt="Logo" href="#about-me" title="Niklas Kahr">
-            <span class="standard-font poppins">© Niklas Kahr</span>
+            <a href=".">
+                <img class="logo inverted mb-1" src="./assets/img/logo.svg" alt="Logo" href="#about-me"
+                    title="Niklas Kahr">
+            </a>
+            <span class="standard-font poppins">© Niklas Kahr 2023</span>
         </div>
         <div class="footer-section standard-font font-16px">
             <div class="mb-2">
@@ -12,11 +15,14 @@
                 <a class="ms" href="mailto:niklaskahr01@gmail.com" title="Email">
                     <img src="./assets/img/email.svg" alt="Email">
                 </a>
-                <a class="ms" href="https://www.linkedin.com/in/niklas-kahr-aab2b7238/?originalSubdomain=at" title="LinkedIn"
-                    target="_blank"><img src="./assets/img/linkedin.svg" alt="LinkedIn">
+                <a class="ms" href="https://www.linkedin.com/in/niklas-kahr-aab2b7238/?originalSubdomain=at"
+                    title="LinkedIn" target="_blank"><img src="./assets/img/linkedin.svg" alt="LinkedIn">
                 </a>
             </div>
-            <span (click)="openDialog()" class="clickable">Legal notice</span>
+            <div class="legal-container">
+                <span (click)="openImprintDialog()" class="clickable">Legal notice</span>
+                <span (click)="openPrivacyDialog()" class="clickable">Privacy policy</span>
+            </div>
         </div>
     </footer>
 </div>

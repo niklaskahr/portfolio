@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollService } from '../services/scroll.service';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  constructor(private scrollService: ScrollService) {}
 
+  onScrollToSkilltree() {
+    this.scrollService.scrollTo('skilltree');
+  }
 }

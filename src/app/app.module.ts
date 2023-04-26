@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ImprintDialogComponent } from './imprint-dialog/imprint-dialog.component';
+import { PrivacyPolicyDialogComponent } from './privacy-policy-dialog/privacy-policy-dialog.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { ImprintDialogComponent } from './imprint-dialog/imprint-dialog.componen
     ProjectComponent,
     ContactComponent,
     FooterComponent,
-    ImprintDialogComponent
+    ImprintDialogComponent,
+    PrivacyPolicyDialogComponent
   ],
   imports: [
     BrowserModule,

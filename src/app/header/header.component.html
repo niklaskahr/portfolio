@@ -1,9 +1,11 @@
 <div class="overlay">
     <header>
-        <img class="logo" src="./assets/img/logo.svg" alt="Logo" href="#about-me" title="Niklas Kahr">
+        <a href=".">
+            <img class="logo" src="./assets/img/logo.svg" alt="Logo" href="#about-me" title="Niklas Kahr">
+        </a>
         <nav class="menu">
-            <a href="">My Skills</a>
-            <a href="">Portfolio</a><a href="">About me</a><a href="">Contact</a>
+            <a (click)="onScrollToSkilltree()">My Skills</a>
+            <a href="#portfolio">Portfolio</a><a href="#about">About me</a><a href="#contact">Contact</a>
         </nav>
     </header>
 </div>
