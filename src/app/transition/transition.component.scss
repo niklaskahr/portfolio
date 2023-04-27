@@ -1,0 +1,14 @@
+img {
+    width: 128px;
+    object-fit: contain;
+    &.alternate {
+        transform: rotate(-90deg);
+    }
+}
+
+.transition-container {
+    width: 66%;
+    height: 18vh;
+    display: flex;
+    justify-content: flex-end;
+}

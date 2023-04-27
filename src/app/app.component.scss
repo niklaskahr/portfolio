@@ -16,14 +16,14 @@ app-skilltree {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 12.5vh;
+    //margin-bottom: 12.5vh;
 }
 
 app-portfolio {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 12.5vh;
+    // margin-bottom: 12.5vh;
 }
 
 app-about {
@@ -31,7 +31,7 @@ app-about {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5vh; 
+    // margin-bottom: 5vh;
 }
 
 app-contact {
@@ -46,4 +46,17 @@ app-footer {
     flex-direction: column;
     align-items: center;
     color: #FFFCF3;
+}
+
+app-transition {
+    display: flex;
+    justify-content: center;
+}
+
+.second-transition {
+    transform: scaleX(-1);
+}
+
+.third-transition {
+    margin: 2% 0 -6% 0;
 }
