@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { ScrollService } from '../services/scroll.service';
 
 @Component({
   selector: 'app-contact',
@@ -12,6 +13,7 @@ export class ContactComponent {
   @ViewChild('messageInput') messageInput!: ElementRef;
   @ViewChild('formButton') formButton!: ElementRef;
 
+  constructor(private scrollService: ScrollService) { }
 
   async sendMail() {
     const nameInput = this.nameInput.nativeElement;
@@ -22,7 +24,7 @@ export class ContactComponent {
     emailInput.disabled = true;
     messageInput.disabled = true;
     formButton.disabled = true;
-
+    
     const fd = new FormData();
     fd.append('name', nameInput.value);
     fd.append('email', emailInput.value);
@@ -38,7 +40,6 @@ export class ContactComponent {
     messageInput.disabled = false;
     formButton.disabled = false;
     this.form.nativeElement.innerHTML += '<p class="success">Your message has been sent successfully!</p>';
-    // delete success message after 5 seconds (fade out)
     setTimeout(() => {
       const success = document.querySelector('.success');
       success?.classList.add('fade-out-success');
@@ -46,5 +47,9 @@ export class ContactComponent {
         success?.remove();
       }, 1250);
     }, 3500);
+  }
+
+  onScrollToHome() {
+    this.scrollService.scrollTo('home');
   }
 }

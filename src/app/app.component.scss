@@ -23,7 +23,15 @@ app-portfolio {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 5vh;
+    margin-bottom: 12.5vh;
+}
+
+app-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vh; 
 }
 
 app-contact {

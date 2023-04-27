@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ImprintDialogComponent } from './imprint-dialog/imprint-dialog.component';
 import { PrivacyPolicyDialogComponent } from './privacy-policy-dialog/privacy-policy-dialog.component';
+import { AboutComponent } from './about/about.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { PrivacyPolicyDialogComponent } from './privacy-policy-dialog/privacy-po
     ContactComponent,
     FooterComponent,
     ImprintDialogComponent,
-    PrivacyPolicyDialogComponent
+    PrivacyPolicyDialogComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

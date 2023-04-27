@@ -11,6 +11,14 @@ import { PrivacyPolicyDialogComponent } from '../privacy-policy-dialog/privacy-p
 export class FooterComponent {
   constructor(private dialog: MatDialog) { }
 
+  ngAfterViewInit(): void {
+    requestAnimationFrame(() => {
+      document.querySelectorAll('.clickable').forEach(element => {
+        element.classList.add('clickable-ready');
+      });
+    });
+  }
+
   openImprintDialog(): void {
     const dialogRef = this.dialog.open(ImprintDialogComponent, {
       width: '60%',
@@ -30,14 +38,6 @@ export class FooterComponent {
       autoFocus: false
     });
     dialogRef.afterClosed().subscribe((result) => {
-    });
-  }
-
-  ngAfterViewInit(): void {
-    requestAnimationFrame(() => {
-      document.querySelectorAll('.clickable').forEach(element => {
-        element.classList.add('clickable-ready');
-      });
     });
   }
 }

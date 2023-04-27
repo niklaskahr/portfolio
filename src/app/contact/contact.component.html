@@ -12,9 +12,9 @@
             <input #nameInput required placeholder="Your name" type="text" name="name">
             <input #emailInput required placeholder="Your email" type="email" name="email">
             <textarea #messageInput required placeholder="Your message" type="text" name="message"></textarea>
-            <button #formButton class="button-black standard-font">Send message</button>
+            <button #formButton class="button-dark standard-font">Send message</button>
         </form>
-        <a class="arrow-link" href="#header">
+        <a (click)="onScrollToHome()" class="arrow-link">
             <div class="arrow"></div>
         </a>
     </div>
