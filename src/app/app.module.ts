@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ScrollAnimationDirective } from './directives/scroll-animation.directive';
@@ -19,6 +18,7 @@ import { ImprintDialogComponent } from './imprint-dialog/imprint-dialog.componen
 import { PrivacyPolicyDialogComponent } from './privacy-policy-dialog/privacy-policy-dialog.component';
 import { AboutComponent } from './about/about.component';
 import { TransitionComponent } from './transition/transition.component';
+import { MenuDialogComponent } from './menu-dialog/menu-dialog.component';
 
 
 @NgModule({
@@ -36,7 +36,8 @@ import { TransitionComponent } from './transition/transition.component';
     ImprintDialogComponent,
     PrivacyPolicyDialogComponent,
     AboutComponent,
-    TransitionComponent
+    TransitionComponent,
+    MenuDialogComponent
   ],
   imports: [
     BrowserModule,

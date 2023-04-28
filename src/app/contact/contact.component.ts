@@ -13,7 +13,7 @@ export class ContactComponent {
   @ViewChild('messageInput') messageInput!: ElementRef;
   @ViewChild('formButton') formButton!: ElementRef;
 
-  constructor(private scrollService: ScrollService) { }
+  constructor(private scrollService: ScrollService, private elementRef: ElementRef) { }
 
   async sendMail() {
     const nameInput = this.nameInput.nativeElement;
@@ -24,7 +24,7 @@ export class ContactComponent {
     emailInput.disabled = true;
     messageInput.disabled = true;
     formButton.disabled = true;
-    
+
     const fd = new FormData();
     fd.append('name', nameInput.value);
     fd.append('email', emailInput.value);
@@ -47,6 +47,15 @@ export class ContactComponent {
         success?.remove();
       }, 1250);
     }, 3500);
+  }
+
+  ngOnInit(): void {
+    this.scrollService.scrollTo$.subscribe((targetElementId: string) => {
+      if (targetElementId === 'contact') {
+        const targetPosition = this.elementRef.nativeElement.offsetTop + 67.5;
+        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+      }
+    });
   }
 
   onScrollToHome() {

@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
+import { ScrollService } from '../services/scroll.service';
 
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss']
 })
-export class PortfolioComponent {
+export class PortfolioComponent implements OnInit {
   projects = [
     {
       title: 'Pokédex',
@@ -17,7 +18,7 @@ export class PortfolioComponent {
     {
       title: 'Join',
       technologies: 'JavaScript | HTML | CSS',
-      description: 'A collaboration hub that makes teamwork a breeze! It\'s packed with all the essential tools you need to keep your team connected and projects on track. <em>Developed through group work.</em>',
+      description: 'A collaboration hub that makes teamwork a breeze! It\'s packed with all the essential tools you need to keep your team connected and projects on track. <em>Created through group effort.</em>',
       image: './assets/img/projects/join.svg',
       link: 'https://niklas-kahr.developerakademie.net/join/assets/templates/login.html'
     },
@@ -36,4 +37,15 @@ export class PortfolioComponent {
       link: 'https://niklas-kahr.developerakademie.net'
     }
   ];
+
+  constructor(private scrollService: ScrollService, private elementRef: ElementRef) {}
+
+  ngOnInit(): void {
+    this.scrollService.scrollTo$.subscribe((targetElementId: string) => {
+      if (targetElementId === 'portfolio') {
+        const targetPosition = this.elementRef.nativeElement.offsetTop - 100;
+        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+      }
+    });
+  }
 }

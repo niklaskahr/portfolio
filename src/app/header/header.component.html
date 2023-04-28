@@ -1,11 +1,18 @@
 <div class="overlay">
     <header>
         <a href=".">
-            <img class="logo" src="./assets/img/logo.svg" alt="Logo" href="#about-me" title="Niklas Kahr">
+            <img class="logo" src="./assets/img/logo.svg" alt="Logo" title="Niklas Kahr">
         </a>
         <nav class="menu">
             <a (click)="onScrollToSkilltree()">My Skills</a>
-            <a href="#portfolio">Portfolio</a><a href="#about">About me</a><a href="#contact">Contact</a>
+            <a (click)="onScrollToPortfolio()">Portfolio</a>
+            <a (click)="onScrollToAbout()">About me</a>
+            <a (click)="onScrollToContact()">Contact</a>
         </nav>
+        <div class="hamburger-menu" (click)="toggleMenu(); openMenuDialog()">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+        </div>
     </header>
 </div>

@@ -7,7 +7,7 @@ import { ScrollService } from '../services/scroll.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  constructor(private scrollService: ScrollService, private elementRef: ElementRef) {}
+  constructor(private scrollService: ScrollService) { }
 
   ngOnInit(): void {
     this.scrollService.scrollTo$.subscribe((targetElementId: string) => {
@@ -20,5 +20,9 @@ export class HomeComponent {
 
   onScrollToSkilltree() {
     this.scrollService.scrollTo('skilltree');
+  }
+
+  onScrollToContact() {
+    this.scrollService.scrollTo('contact');
   }
 }
