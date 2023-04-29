@@ -54,3 +54,70 @@
     transform: rotate(-90deg) translate(2%, 100%);
     transform-origin: bottom left;
 }
+
+@media (max-width: 1380px) {
+    .name {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 1075px) {
+    .title-container {
+        height: 45%;
+    }
+
+    .reference-container {
+        height: calc(55% - 15vh)
+    }
+
+    .name {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 850px) {
+    .line {
+        margin: 0 1rem 12px 0;
+    }
+
+    .name {
+        font-size: 24px;
+    }
+
+    .home-font {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 675px) {
+    .reference-container {
+        height: calc(55% - 12.5vh);
+        margin-bottom: 12.5vh;
+    }
+}
+
+@media (max-width: 575px) {
+    .title-container {
+        height: 35%;
+    }
+
+    .reference-container {
+        height: calc(65% - 12.5vh - 7.5vh);
+        padding-bottom: 7.5vh;
+    }
+
+    .line {
+        width: 62.5%;
+    }
+}
+
+@media (max-width: 475px) {
+    .line {
+        width: 40%;
+        margin: 0 0.75rem 12px 0;
+    }
+
+    .home-font {
+        font-size: 18px;
+    }
+}

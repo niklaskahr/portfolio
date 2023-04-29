@@ -1,6 +1,6 @@
 h2 {
     text-align: start;
-    margin-bottom: 5vh;
+    margin-bottom: 4vh;
 }
 
 button {
@@ -38,4 +38,16 @@ img {
 
 .description {
     width: 50%;
+}
+
+@media (max-width: 850px) {
+    .about-container {
+        padding: 0 6vw;
+    }
+}
+
+@media (max-width: 475px) {
+    .about-container {
+        padding: 0 4vw;
+    }
 }

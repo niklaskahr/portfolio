@@ -1,14 +1,17 @@
-<div (click)="navigateToLink(projectData.link)" class="project-illustration">
-    <img class="illustration shadow-sm" [src]="projectData.image" [alt]="projectData.title">
-    <div class="border" [ngClass]="{ 'alternate-border': isAlternate }">
-        <img class="arrow" [ngClass]="{ 'alternate-arrow': isAlternate }" src="./assets/img/arrow.svg" alt="Arrow">
+<div class="project-illustration">
+    <img #projectIllustration (click)="navigateToLink(projectData.link)" class="illustration shadow-sm"
+        [src]="projectData.image" [alt]="projectData.title">
+    <div #projectBorder (click)="navigateToLink(projectData.link)" class="border"
+        [ngClass]="{ 'alternate-border': isAlternate }">
+        <img class="arrow" (load)="setBorder()" [ngClass]="{ 'alternate-arrow': isAlternate }"
+            src="./assets/img/arrow.svg" alt="Arrow">
     </div>
 </div>
 <div class="project-details" [ngClass]="{ 'alternate-details': isAlternate }">
     <span class="enumeration">{{ getEnumeration() }}</span>
     <div class="animated-details" [ngClass]="{ 'alternate-animated-details': isAlternate }">
         <h3 class="title">{{ projectData.title }}</h3>
-        <span class="technologies">{{ projectData.technologies }}</span>
+        <span class="technology">{{ projectData.technologies }}</span>
         <p class="description" [innerHTML]="projectData.description"></p>
         <button class="button-bright" (click)="navigateToLink(projectData.link)">View</button>
     </div>
