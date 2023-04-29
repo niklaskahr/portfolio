@@ -9,21 +9,12 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  menuOpen: boolean = false;
+  isMenuOpen: boolean = false;
 
   constructor(private dialog: MatDialog, private scrollService: ScrollService) { }
 
-  toggleMenu() {
-    const line1 = document.querySelector('.line1');
-    const line2 = document.querySelector('.line2');
-    const line3 = document.querySelector('.line3');
-
-    line1?.classList.toggle('open');
-    line2?.classList.toggle('open');
-    line3?.classList.toggle('open');
-  }
-
   openMenuDialog(): void {
+    this.toggleMenu();
     const dialogRef = this.dialog.open(MenuDialogComponent, {
       width: '60%',
       maxWidth: '700px',
@@ -31,8 +22,21 @@ export class HeaderComponent {
       autoFocus: false
     });
     dialogRef.afterClosed().subscribe((result) => {
+      this.toggleMenu();
     });
   }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+    // const line1 = document.querySelector('.line1');
+    // const line2 = document.querySelector('.line2');
+    // const line3 = document.querySelector('.line3');
+
+    // line1?.classList.toggle('open');
+    // line2?.classList.toggle('open');
+    // line3?.classList.toggle('open');
+  }
+
 
   onScrollToSkilltree() {
     this.scrollService.scrollTo('skilltree');
