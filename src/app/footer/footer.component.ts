@@ -24,7 +24,7 @@ export class FooterComponent {
       width: '60%',
       maxWidth: '700px',
       height: 'fit-content',
-      autoFocus: false
+      autoFocus: false,
     });
     dialogRef.afterClosed().subscribe((result) => {
     });

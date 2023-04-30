@@ -12,7 +12,7 @@ export class SkilltreeComponent implements OnInit {
   ngOnInit(): void {
     this.scrollService.scrollTo$.subscribe((targetElementId: string) => {
       if (targetElementId === 'skilltree') {
-        const targetPosition = this.elementRef.nativeElement.offsetTop - 70;
+        const targetPosition = this.elementRef.nativeElement.offsetTop - 90;
         window.scrollTo({ top: targetPosition, behavior: 'smooth' });
       }
     });

@@ -20,7 +20,6 @@ import { AboutComponent } from './about/about.component';
 import { TransitionComponent } from './transition/transition.component';
 import { MenuDialogComponent } from './menu-dialog/menu-dialog.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

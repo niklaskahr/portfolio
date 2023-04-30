@@ -1,6 +1,7 @@
 img {
     width: 128px;
     object-fit: contain;
+
     &.alternate {
         transform: rotate(-90deg);
     }
@@ -12,4 +13,14 @@ img {
     min-height: 160px;
     display: flex;
     justify-content: flex-end;
+}
+
+@media (max-width: 600px) {
+    img {
+        width: 96px;
+    }
+
+    .transition-container {
+        width: 75%;
+    }    
 }

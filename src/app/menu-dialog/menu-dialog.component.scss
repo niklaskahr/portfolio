@@ -1,11 +1,29 @@
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 0;
+
+    a {
+        margin-bottom: 1rem;
+    }
+}
+
 .mdc-dialog__content {
     font-family: 'Overpass', sans-serif !important;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 100%;
 
     h2 {
-        font-size: 20px !important;
         font-weight: 500;
         display: flex;
         justify-content: flex-start;
+    }
+
+    ::ng-deep h3 {
+        text-align: center;
+        line-break: auto !important;
     }
 }
 
@@ -17,30 +35,12 @@
     justify-content: flex-end !important;
 }
 
-.mdc-dialog__surface {
-    border-radius: 0 !important;
+.social-links {
+    display: flex;
+    justify-content: space-evenly;
 }
 
-body {
-    border-radius: 0 !important;
+.flex {
+    display: flex;
+    justify-content: space-between
 }
-
-html {
-    border-radius: 0 !important;
-}
-
-.mat-mdc-dialog-surface {
-    border-radius: 0 !important;
-}
-
-.mat-dialog-container {
-    border-radius: 0 !important;
-}
-
-.mat-mdc-dialog-container {
-    border-radius: 0 !important;
-}
-
-.mat-dialog-container {
-    border-radius: 0 !important;
-  }

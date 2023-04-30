@@ -17,7 +17,6 @@ export class HeaderComponent {
     this.toggleMenu();
     const dialogRef = this.dialog.open(MenuDialogComponent, {
       width: '60%',
-      maxWidth: '700px',
       height: 'fit-content',
       autoFocus: false
     });

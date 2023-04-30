@@ -46,8 +46,38 @@ img {
     }
 }
 
+@media (max-width: 800px) {
+    p {
+        margin-block-start: 0
+    }
+
+    .about-container {
+        flex-direction: column-reverse;
+        align-items: center;
+
+        &:hover>.portrait>.border {
+            animation: none;
+        }
+    }
+
+    .description {
+        width: unset;
+    }
+
+    .portrait {
+        width: 60%;
+        margin-bottom: 3rem;
+    }
+}
+
 @media (max-width: 475px) {
     .about-container {
         padding: 0 4vw;
+    }
+}
+
+@media (max-width: 350px) {
+    .portrait {
+        width: 75%;
     }
 }

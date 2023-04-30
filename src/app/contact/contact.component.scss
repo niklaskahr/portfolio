@@ -148,3 +148,39 @@ form[ngNativeValidate] {
 .flex {
     display: flex;
 }
+
+@media (max-width: 1300px) {
+    form[ngNativeValidate] {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1075px) {
+    .orange {
+        font-size: 28px
+    }
+}
+
+@media (max-width: 600px) {
+    .background {
+        clip-path: polygon(0 0, 100% 7.5%, 100% 100%, 0 100%);
+    }
+}
+
+
+@media (max-width: 475px) {
+    .orange {
+        font-size: 22px
+    }
+}
+
+@media (max-width: 450px) {
+    form[ngNativeValidate] {
+        margin: auto 0 5rem 0;
+    }
+
+    .arrow-link {
+        right: unset;
+        bottom: 0;
+    }
+}

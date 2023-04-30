@@ -14,37 +14,6 @@ body {
     margin: 0 12vw;
 }
 
-app-project {
-
-    // cannot be added anywhere else
-
-    &:hover>.project-illustration>.border {
-        visibility: visible;
-        animation: fade-in-top-left 0.2s ease;
-
-        &.alternate-border {
-            animation: fade-in-top-right 0.2s ease !important;
-        }
-
-        .arrow {
-            animation: turn-right 0.65s ease-out forwards;
-
-            &.alternate-arrow {
-                animation: turn-left 0.65s ease-out forwards !important;
-            }
-        }
-    }
-
-    &:hover>.project-details>.animated-details {
-        visibility: visible;
-        animation: fade-in-left 0.2s ease;
-
-        &.alternate-animated-details {
-            animation: fade-in-right 0.2s ease;
-        }
-    }
-}
-
 h1 {
     display: flex;
     justify-content: center;
@@ -88,9 +57,44 @@ a {
     cursor: pointer;
 }
 
+app-project {
+
+    // cannot be added anywhere else
+
+    &:hover>.project-illustration>.border {
+        visibility: visible;
+        animation: fade-in-top-left 0.2s ease;
+
+        &.alternate-border {
+            animation: fade-in-top-right 0.2s ease !important;
+        }
+
+        .arrow {
+            animation: turn-right 0.65s ease-out forwards;
+
+            &.alternate-arrow {
+                animation: turn-left 0.65s ease-out forwards !important;
+            }
+        }
+    }
+
+    &:hover>.project-details>.animated-details {
+        visibility: visible;
+        animation: fade-in-left 0.2s ease;
+
+        &.alternate-animated-details {
+            animation: fade-in-right 0.2s ease;
+        }
+    }
+}
+
 .logo {
     object-fit: contain;
     cursor: pointer;
+}
+
+.inverted {
+    filter: invert(1);
 }
 
 .standard-font {
@@ -283,9 +287,70 @@ a {
     }
 }
 
+@media (max-width: 800px) {
+    app-project {
+        &:hover>.project-illustration>.border {
+            animation: none;
+
+            &.alternate-border {
+                animation: none !important;
+            }
+        }
+
+        &:hover>.project-details>.animated-details {
+            animation: none;
+
+            &.alternate-animated-details {
+                animation: none;
+            }
+        }
+    }
+
+    .border {
+        visibility: visible;
+        animation: none;
+
+        &.alternate-border {
+            animation: none;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .button-bright {
+        padding: 16px 32px;
+
+        &:hover {
+            padding: 16px 52px;
+        }
+
+        &:active {
+            padding: 16px 49px;
+        }
+    }
+
+    .button-dark {
+        padding: 16px 32px;
+
+        &:hover {
+            padding: 16px 52px;
+        }
+
+        &:active {
+            padding: 16px 49px;
+        }
+    }
+}
+
 @media (max-width: 575px) {
     h1 {
         font-size: 48px;
+    }
+
+    .cdk-overlay-pane {
+        width: 90% !important;
+        line-break: anywhere;
+        hyphens: auto;
     }
 }
 
@@ -306,7 +371,37 @@ a {
         font-size: 24px
     }
 
+    .standard-font {
+        font-size: 20px;
+    }
+
     .background {
         padding: 0 4vw;
+    }
+}
+
+@media (max-width: 450px) {
+    .button-bright {
+        padding: 10px 16px;
+
+        &:hover {
+            padding: 10px 36px;
+        }
+
+        &:active {
+            padding: 10px 33px;
+        }
+    }
+
+    .button-dark {
+        padding: 10px 16px;
+
+        &:hover {
+            padding: 10px 36px;
+        }
+
+        &:active {
+            padding: 10px 33px;
+        }
     }
 }

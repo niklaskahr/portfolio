@@ -102,12 +102,12 @@
     }
 
     .project-illustration {
-        width: 75%;
+        width: 85%;
         margin-bottom: 3rem;
     }
 
     .project-details {
-        width: 75%;
+        width: 100%;
 
         &.alternate-details {
             align-items: flex-end;
@@ -115,7 +115,13 @@
     }
 
     .animated-details {
+        visibility: visible;
+        animation: none;
         padding-bottom: unset;
+
+        &.alternate-animated-details {
+            animation: none;
+        }
     }
 
     .arrow {

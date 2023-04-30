@@ -52,7 +52,7 @@ export class ContactComponent {
   ngOnInit(): void {
     this.scrollService.scrollTo$.subscribe((targetElementId: string) => {
       if (targetElementId === 'contact') {
-        const targetPosition = this.elementRef.nativeElement.offsetTop + 67.5;
+        const targetPosition = this.elementRef.nativeElement.offsetTop + 40;
         window.scrollTo({ top: targetPosition, behavior: 'smooth' });
       }
     });

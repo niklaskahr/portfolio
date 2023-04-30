@@ -1,9 +1,9 @@
 <div class="project-illustration">
-    <img #projectIllustration (click)="navigateToLink(projectData.link)" class="illustration shadow-sm"
+    <img #projectIllustration (load)="setBorder()" (click)="navigateToLink(projectData.link)" class="illustration shadow-sm"
         [src]="projectData.image" [alt]="projectData.title">
     <div #projectBorder (click)="navigateToLink(projectData.link)" class="border"
         [ngClass]="{ 'alternate-border': isAlternate }">
-        <img class="arrow" (load)="setBorder()" [ngClass]="{ 'alternate-arrow': isAlternate }"
+        <img class="arrow" [ngClass]="{ 'alternate-arrow': isAlternate }"
             src="./assets/img/arrow.svg" alt="Arrow">
     </div>
 </div>
