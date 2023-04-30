@@ -90,6 +90,10 @@
     .arrow {
         width: 55px;
         right: -29px;
+
+        &.alternate-arrow {
+            left: -29px;
+        }
     }
 }
 
