@@ -79,6 +79,11 @@
     line-height: 120%;
 }
 
+.me {
+    margin-right: 1rem;
+}
+
+
 @media (max-width: 1075px) {
 
     .enumeration {
@@ -141,5 +146,11 @@
     .enumeration {
         font-size: 27px;
         right: 4vw;
+    }
+}
+
+@media (max-width: 300px) {
+    .me {
+        margin-right: 0.75rem;
     }
 }

@@ -1,6 +1,8 @@
 <h2 class="mb-1">Portfolio</h2>
 <span class="standard-font">The following is a sample of my work - please feel free to try out some of my
     projects.</span>
-<app-project *ngFor="let project of projects; let i = index" [class.alternate]="i % 2 !== 0" [projectData]="project"
-    [isAlternate]="i % 2 !== 0" [index]="i" [projectsLength]="projects.length"
-    [dataAos]="i % 2 === 0 ? 'fade-right' : 'fade-left'"></app-project>
+<ng-container *ngIf="isShowingProjectComponents">
+    <app-project *ngFor="let project of projects; let i = index" [class.alternate]="i % 2 !== 0" [projectData]="project"
+        [isAlternate]="i % 2 !== 0" [index]="i" [projectsLength]="projects.length"
+        [dataAos]="i % 2 === 0 ? 'fade-right' : 'fade-left'" data-aos-offset="200"></app-project>
+</ng-container>

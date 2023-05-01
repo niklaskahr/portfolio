@@ -1,5 +1,6 @@
 import { Component, ElementRef, HostListener, Input, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { BreakpointObserver } from '@angular/cdk/layout';
+import AOS from "aos";
 
 @Component({
   selector: 'app-project',
@@ -15,7 +16,10 @@ export class ProjectComponent implements OnInit {
   @ViewChild('projectIllustration') illustration!: ElementRef;
   @ViewChild('projectBorder') border!: ElementRef;
 
-  constructor(private breakpointObserver: BreakpointObserver, private renderer: Renderer2, private element: ElementRef) { }
+  constructor(private breakpointObserver: BreakpointObserver, private renderer: Renderer2, private element: ElementRef) {
+    AOS.init();
+    AOS.refresh();
+  }
 
   ngOnInit() {
     this.updateDataAosAttribute();
@@ -29,17 +33,13 @@ export class ProjectComponent implements OnInit {
     window.open(link, '_blank');
   }
 
-  setBorder() {
-    this.setTargetElementHeight();
-  }
-
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
-    this.setTargetElementHeight();
+    this.setBorder();
     this.updateDataAosAttribute();
   }
 
-  setTargetElementHeight() {
+  setBorder() {
     if (this.illustration && this.border) {
       const illustrationHeight = this.illustration.nativeElement.offsetHeight;
       this.border.nativeElement.style.height = `${illustrationHeight}px`;
