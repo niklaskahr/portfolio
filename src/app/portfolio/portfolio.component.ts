@@ -28,7 +28,7 @@ export class PortfolioComponent implements OnInit {
     {
       title: 'Sharkie',
       technologies: 'JavaScript | HTML | CSS',
-      description: 'A simple Jump ’n’ Run Game based on an object-oriented approach. Help Sharkie to find coins and poison bottles to fight against enemies.',
+      description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Sharkie to find coins and poison bottles to fight against enemies.',
       image: './assets/img/projects/sharkie.svg',
       link: 'https://niklas-kahr.developerakademie.net/sharkie/index.html',
       github: 'https://github.com/NiklasKahr/sharkie'
