@@ -14,7 +14,7 @@ export class PortfolioComponent implements OnInit {
       technologies: 'RestAPI | JavaScript | HTML | CSS',
       description: 'An interactive web app for exploring Pokémon using PokéAPI. It displays essential details and offers convenient features like unit conversions and seamless navigation.',
       image: './assets/img/projects/pokedex.jpg',
-      link: 'https://niklas-kahr.developerakademie.net/pokedex/index.html',
+      link: 'https://niklaskahr.com/pokedex',
       github: 'https://github.com/NiklasKahr/pokedex'
     },
     {
@@ -22,7 +22,7 @@ export class PortfolioComponent implements OnInit {
       technologies: 'JavaScript | HTML | CSS',
       description: 'A collaboration hub that makes teamwork a breeze! It\'s packed with all the essential tools you need to keep your team connected and projects on track. <em>Created through group effort.</em>',
       image: './assets/img/projects/join.svg',
-      link: 'https://niklas-kahr.developerakademie.net/join/assets/templates/login.html',
+      link: 'https://niklaskahr.com/join/assets/templates/login.html',
       github: 'https://github.com/NiklasKahr/join'
     },
     {
@@ -30,7 +30,7 @@ export class PortfolioComponent implements OnInit {
       technologies: 'JavaScript | HTML | CSS',
       description: 'A simple Jump-and-Run game based on an object-oriented approach. Help Sharkie to find coins and poison bottles to fight against enemies.',
       image: './assets/img/projects/sharkie.svg',
-      link: 'https://niklas-kahr.developerakademie.net/sharkie/index.html',
+      link: 'https://niklaskahr.com/sharkie',
       github: 'https://github.com/NiklasKahr/sharkie'
     },
     {
@@ -38,7 +38,7 @@ export class PortfolioComponent implements OnInit {
       technologies: 'Angular | Firebase',
       description: '<b class="red">(note for mentors: will be developed in next module)</b><br>A Customer Relationship Management system featuring comprehensive CRUD operations to effectively manage and maintain client relationships.',
       image: './assets/img/projects/crm.svg',
-      link: 'https://niklas-kahr.developerakademie.net',
+      link: 'https://niklaskahr.com/simple-crm',
       github: 'https://github.com/NiklasKahr/simple-crm'
     }
   ];
