@@ -36,7 +36,7 @@ export class PortfolioComponent implements OnInit {
     {
       title: 'Simple CRM',
       technologies: 'Angular | Firebase',
-      description: '<b class="red">(note for mentors: will be developed in next module)</b><br>A Customer Relationship Management system featuring comprehensive CRUD operations to effectively manage and maintain client relationships.',
+      description: '<b class="red">(In development)</b><br>A Customer Relationship Management system featuring comprehensive CRUD operations to effectively manage and maintain client relationships.',
       image: './assets/img/projects/crm.svg',
       link: 'https://niklaskahr.com/simple-crm',
       github: 'https://github.com/NiklasKahr/simple-crm'
