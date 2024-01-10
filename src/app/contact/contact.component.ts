@@ -29,7 +29,7 @@ export class ContactComponent {
     fd.append('name', nameInput.value);
     fd.append('email', emailInput.value);
     fd.append('message', messageInput.value);
-    await fetch('https://niklas-kahr.developerakademie.net/send_mail/send_mail.php',
+    await fetch('https://niklaskahr.com/send_mail/send_mail.php',
       {
         method: 'POST',
         body: fd
